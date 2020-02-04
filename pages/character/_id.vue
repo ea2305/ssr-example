@@ -1,19 +1,16 @@
 <template>
   <div class="container">
-
-    <h1>{{ name }}</h1>
-    <img :src="image" :alt="name" height="200">
-    <p>Status: {{ status }}</p>
-    <p>Species: {{ species }}</p>
-    <p>Type: {{ type }}</p>
-    <p>Gender: {{ gender }}</p>
-    <p>Origin: {{ origin.name }}</p>
-    <p>Location: {{ location.name }}</p>
+    <button class="button is-warning is-fullwidth has-text-centered" @click="backPage">Back</button>
+    <Preview :name="name" :image="image" :status="status" :species="species" :type="type" :gender="gender" :origin="origin" :location="location"/>
 
   </div>
+
+
 </template>
 
 <script>
+import Preview from '~/components/Preview'
+
 export default {
   head () {
     return {
@@ -30,6 +27,14 @@ export default {
     let { id } = route.params
     let { data } = await app.$axios.get(`/character/${id}`)
     return data
+  },
+  components: {
+    Preview
+  },
+  methods: {
+    backPage () {
+      this.$router.go(-1)
+    }
   }
 }
 </script>

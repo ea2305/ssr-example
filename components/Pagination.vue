@@ -1,8 +1,8 @@
 <template>
-  <nav>
-    <button @click="updatePage(-1)">prev</button>
+  <nav class="box has-text-centered">
+    <button class="button is-dark" @click="updatePage(-1)">prev</button>
     <span>|</span>
-    <button @click="updatePage(1)">next</button>
+    <button class="button is-dark" @click="updatePage(1)">next</button>
   </nav>
 </template>
 
