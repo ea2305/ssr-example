@@ -5,10 +5,10 @@
   "author": "Elihu Cruz",
   "private": true,
   "scripts": {
-    "dev": "ENV APP_URL=http://localhost:3000 nuxt",
-    "build": "ENV APP_URL=http://localhost:3000 nuxt build",
-    "start": "ENV APP_URL=http://localhost:3000 nuxt start",
-    "generate": "ENV APP_URL=http://localhost:3000 nuxt generate"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "5.9.5",
