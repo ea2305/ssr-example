@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Charaters</h1>
+    <h1 class="title has-text-centered">Characters</h1>
 
     <List :items="results" />
 

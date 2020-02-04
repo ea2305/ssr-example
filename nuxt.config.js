@@ -38,7 +38,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/bulma'
   ],
   axios: {
     baseURL: 'https://rickandmortyapi.com/api/'
