@@ -16,10 +16,12 @@ export default {
     return {
       title: `About: ${this.name}`,
       meta: [
-        { property: 'og:title', content: `Character: ${this.name}` },
-        { property: 'og:description', content: `About: ${this.name}` },
-        { property: 'og:image', content: this.image },
-        { property: 'og:url', content: `http://localhost:3000/character/${this.name}` },
+        { hid: 'og:title', property: 'og:title', content: `Character: ${this.name}` },
+        { hid: 'og:description', property: 'og:description', content: `About: ${this.name}` },
+        { hid: 'og:image', property: 'og:image', content: this.image },
+        { hid: `og:image:width`, property: 'og:image:width', content: '1200' },
+        { hid: `og:image:height`, property: 'og:image:height', content: '630' },
+        { hid: 'og:url', property: 'og:url', content: `${process.env.APP_URL}/character/${this.id}` },
       ]
     }
   },

@@ -39,8 +39,12 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/dotenv'
   ],
+  dotenv: {
+    APP_URL: process.env.APP_URL
+  },
   axios: {
     baseURL: 'https://rickandmortyapi.com/api/'
   },
